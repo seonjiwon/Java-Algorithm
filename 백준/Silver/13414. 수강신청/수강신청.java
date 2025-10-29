@@ -20,7 +20,11 @@ public class Main {
             set.add(studentNumber);
         }
 
-        set.stream().limit(K).forEach(System.out::println);
+        StringBuilder sb = new StringBuilder();
+
+//        set.stream().limit(K).forEach(System.out::println);
+        set.stream().limit(K).forEach(s -> sb.append(s).append("\n"));
+        System.out.println(sb);
 
         br.close();
     }
